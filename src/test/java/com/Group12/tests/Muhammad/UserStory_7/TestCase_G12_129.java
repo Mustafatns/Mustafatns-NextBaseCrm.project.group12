@@ -53,7 +53,7 @@ public class TestCase_G12_129 extends LoginToTryCrm {
         commentPost.click();
         BrowserUtils.sleep(2);
 
-
+        //type Comment
         Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.className("bx-editor-iframe")));
         WebElement sendMessage = Driver.getDriver().findElement(By.xpath("//body"));
         sendMessage.click();
@@ -61,14 +61,10 @@ public class TestCase_G12_129 extends LoginToTryCrm {
         BrowserUtils.sleep(2);
         Driver.getDriver().switchTo().defaultContent();
 
+        //click Send button
         WebElement SendButton = Driver.getDriver().findElement(By.xpath("//button[@class='ui-btn ui-btn-sm ui-btn-primary']"));
         SendButton.click();
         BrowserUtils.sleep(2);
-
-
-       // WebElement sendButton = Driver.getDriver().findElement(By.xpath("//button[@id='lhe_button_submit_blogCommentFormJn3F']"));
-       // sendButton.click();
-        //BrowserUtils.sleep(2);
 
       Driver.closeDriver();
 
