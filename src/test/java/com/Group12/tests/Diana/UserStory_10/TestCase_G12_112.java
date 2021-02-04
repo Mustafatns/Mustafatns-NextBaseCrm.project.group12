@@ -75,6 +75,12 @@ public class TestCase_G12_112 extends LoginToTryCrm {
 
         startTaskOn.click();
 
+        WebElement clickSelectST = Driver.getDriver().findElement(By.xpath("//a[@class='bx-calendar-button bx-calendar-button-select']/span[2]"));
+
+        BrowserUtils.sleep(2);
+
+        clickSelectST.click();
+
 
         // User can add Duration of 120 minutes.
 
@@ -100,6 +106,11 @@ public class TestCase_G12_112 extends LoginToTryCrm {
 
         endingDate.click();
 
+        WebElement clickSelectED = Driver.getDriver().findElement(By.xpath("//a[@class='bx-calendar-button bx-calendar-button-select']/span[2]"));
+
+        BrowserUtils.sleep(2);
+
+        clickSelectED.click();
 
     }
 }

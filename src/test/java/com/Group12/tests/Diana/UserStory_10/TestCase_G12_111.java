@@ -19,7 +19,7 @@ public class TestCase_G12_111 extends LoginToTryCrm {
     //UserUser
 
     @Test
-    public void User_can_check_High_Priority() throws InterruptedException {
+    public void User_can_click_on_Checklist() throws InterruptedException {
 
 
         // User can navigate to Task tab and click it.

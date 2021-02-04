@@ -1,8 +1,12 @@
 package com.Group12.tests.Diana;
 
+import com.Group12.utility.BrowserUtils;
+import com.Group12.utility.Driver;
 import com.google.common.base.Verify;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
-public class Test  {
+public class Test {
 
     // USER STORY:
     // As a user, I should be able to assign tasks by clicking on Task tab.
@@ -20,8 +24,6 @@ public class Test  {
     // 2. users can click on "Checklist" to create checklists items
     // 3. users can add deadline by selecting a date from calendar
     // 4. users can config task starting date, duration and ending date with "Time Planning" feature
-
-
 
 
 

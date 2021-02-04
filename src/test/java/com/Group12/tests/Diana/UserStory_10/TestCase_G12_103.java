@@ -19,8 +19,7 @@ public class TestCase_G12_103 extends LoginToTryCrm {
 
 
     @Test
-    public void User_can_check_High_Priority() throws InterruptedException {
-
+    public void User_can_check_High_Priority()  throws InterruptedException {
 
         // User can navigate to Task tab and click it.
 
