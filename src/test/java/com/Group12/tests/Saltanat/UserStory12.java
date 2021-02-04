@@ -5,13 +5,11 @@ import com.Group12.utility.BrowserUtils;
 import com.Group12.utility.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.WebElement;;
 import org.testng.annotations.Test;
 
 
 public class UserStory12 extends LoginToTryCrm {
-
 
     @Test
     public void As_a_user_I_should_be_able_to_send_aVerify_users_search() throws InterruptedException {
