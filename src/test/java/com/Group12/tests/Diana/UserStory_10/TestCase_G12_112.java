@@ -3,29 +3,25 @@ package com.Group12.tests.Diana.UserStory_10;
 import com.Group12.TestBase.LoginToTryCrm;
 import com.Group12.utility.BrowserUtils;
 import com.Group12.utility.Driver;
+import org.apache.hc.core5.util.Deadline;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import java.sql.Time;
 
-// USER STORY:
-// As a user, I should be able to assign tasks by clicking on Task tab.
+public class TestCase_G12_112 extends LoginToTryCrm {
 
-
-//Log in credentials:
-//marketing22@cybertekschool.com
-//UserUser
+    // USER STORY:
+    // As a user, I should be able to assign tasks by clicking on Task tab.
 
 
-
-public class UserStory10_MarketingUser extends LoginToTryCrm {
-
-
+    //Log in credentials:
+    //marketing22@cybertekschool.com
+    //UserUser
 
     @Test
-    public void  As_a_user_I_should_be_able_to_assign_tasks_by_clicking_on_Task_tab() throws InterruptedException {
-
+    public void User_can_add_Deadline_Time_Planning_by_using_date_pickers() throws InterruptedException {
 
         // User can navigate to Task tab and click it.
 
@@ -35,49 +31,9 @@ public class UserStory10_MarketingUser extends LoginToTryCrm {
 
         chooseFile.click();
 
-        // TC -1- User can check "High Priority"
-
-        // User can mark "high priority" check box.
-
-        WebElement highPriorityCheckBox = Driver.getDriver().findElement(By.xpath("//input[@id='tasks-task-priority-cb']"));
-
-        BrowserUtils.sleep(2);
-
-        highPriorityCheckBox.click();
-
-
-        // Verify "high priority" check box was selected.
-        // System.out.println("highPriorityCheckBox.isSelected() = " + highPriorityCheckBox.isSelected());
-        // BrowserUtils.sleep(2);
-
-        // TC -2- User can click on "Checklist" to create checklists items
-
-        // User can click on "Checklist".
-
-        WebElement clickOnChecklist = Driver.getDriver().findElement(By.xpath("//div[@class='feed-add-post-form-but-wrap']/span[@data-target='checklist']"));
-
-        BrowserUtils.sleep(2);
-
-        clickOnChecklist.click();
-
-        // User can create checklists items.
-
-        WebElement createChecklist = Driver.getDriver().findElement(By.xpath("//span[@class='task-checklist-form-vpadding']/input[@type='text']"));
-
-        BrowserUtils.sleep(2);
-
-        createChecklist.click();
-
-        BrowserUtils.sleep(2);
-
-        createChecklist.sendKeys("User Story 8");
-
-        createChecklist.sendKeys(Keys.ENTER);
-
-
         //TC -3- User can add Deadline, Time Planning by using date pickers.
 
-        // User can add Deadline by using date pickers.
+        // 1 - User can add Deadline by using date pickers.
 
         // User can click on Deadline.
 
@@ -97,7 +53,7 @@ public class UserStory10_MarketingUser extends LoginToTryCrm {
         addDate.click();
 
 
-        // User can add Time Planning by using date pickers.
+        // 2 - User can add Time Planning by using date pickers.
 
         // User can click on Time Planning.
 
@@ -109,7 +65,7 @@ public class UserStory10_MarketingUser extends LoginToTryCrm {
 
 
 
-        // User can config task starting date, duration and ending date with "Time Planning" feature.
+        // 3 - User can config task starting date, duration and ending date with "Time Planning" feature.
 
         // User can add Start Task On date.
 
@@ -145,18 +101,5 @@ public class UserStory10_MarketingUser extends LoginToTryCrm {
         endingDate.click();
 
 
-
-
-
-
     }
-
-
-
-
-
-
-
-
-
 }
