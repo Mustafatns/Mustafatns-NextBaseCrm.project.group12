@@ -18,7 +18,7 @@ public class LoginToTryCrm {
         Thread.sleep(2000);
 
         WebElement logIn = Driver.getDriver().findElement(By.name("USER_LOGIN"));
-        logIn.sendKeys(ConfigurationReader.getProperty("marketing"));
+        logIn.sendKeys(ConfigurationReader.getProperty("helpdesk"));
 
         Thread.sleep(2000);
 
