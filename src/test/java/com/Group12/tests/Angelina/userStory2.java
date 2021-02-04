@@ -58,6 +58,45 @@ public class userStory2 extends LoginToTryCrm {
 
         }
 
+        @Test       // #3 test case
+
+    public void users_can_attach_link_by_clicking_on_the_link_icon() throws InterruptedException {
+            // find a button MESSAGE
+            WebElement message = Driver.getDriver().findElement(By.id("feed-add-post-form-tab-message"));
+            message.click();
+
+            // put text inside the window
+
+            WebElement frame= Driver.getDriver().findElement(By.xpath("//iframe[@class='bx-editor-iframe']"));
+            Driver.getDriver().switchTo().frame(frame);
+            Driver.getDriver().findElement(By.xpath("/html/body")).sendKeys("Hello -->\n");
+            Driver.getDriver().switchTo().parentFrame();
+            BrowserUtils.sleep(2);
+
+            //click button link
+            WebElement link = Driver.getDriver().findElement(By.xpath("//*[@id=\"bx-b-link-blogPostForm\"]/span/i"));
+            link.click();
+
+            // verify we can write url to the box
+            WebElement url = Driver.getDriver().findElement(By.id("linkidPostFormLHE_blogPostForm-href"));
+            url.sendKeys("nextbasecrm.com/stream/?login=yes");
+            BrowserUtils.sleep(2);
+
+            // verify you can save your link
+            WebElement saveButton = Driver.getDriver().findElement(By.name("undefined"));
+            saveButton.click();
+            BrowserUtils.sleep(2);
+
+            //click button send
+            WebElement button = Driver.getDriver().findElement(By.id("blog-submit-button-save"));
+            button.click();
+            BrowserUtils.sleep(3);
+
+
+        }
+
+
+
 
 
 
