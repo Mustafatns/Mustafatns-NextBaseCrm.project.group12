@@ -4,8 +4,11 @@ import com.Group12.TestBase.LoginToTryCrm;
 import com.Group12.utility.BrowserUtils;
 import com.Group12.utility.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+
 
 public class UserStory12 extends LoginToTryCrm {
 
@@ -17,28 +20,10 @@ public class UserStory12 extends LoginToTryCrm {
         WebElement filterButton = Driver.getDriver().findElement(By.id("LIVEFEED_search"));
         filterButton.click();
         BrowserUtils.sleep(3);
-
-        Driver.getDriver().findElement(By.xpath("//input[@type='text']")).sendKeys("Tell me about your favorite color?");
-
-WebElement searchButton = Driver.getDriver().findElement(By.xpath("//span[@class='main-ui-item-icon main-ui-search']"));
-searchButton.click();
-BrowserUtils.sleep(3);
-
-
-
-
-
-
-
-
-
-//2. Verify users can search by editing Date, Type, Author, To and more default dropdowns.
-//3. Users should be able to Filter by work, favorites, my activity,
- //announcement and workflow. "
-
-
+        //Searching for "Tell me about Cybertek school?"
+        filterButton.sendKeys("Tell me about Cybertek school?", Keys.ENTER);
+        BrowserUtils.sleep(3);
 
     }
-
 
 }
