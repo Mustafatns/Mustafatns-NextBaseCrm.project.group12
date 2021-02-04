@@ -1,4 +1,4 @@
-package com.Group12.tests.Saltanat.UserStory_1;
+package com.Group12.tests.Serdar.UserStory_1;
 
 import com.Group12.utility.ConfigurationReader;
 import com.Group12.utility.Driver;
