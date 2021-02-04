@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;;
 import org.testng.annotations.Test;
 
 
-public class UserStory12 extends LoginToTryCrm {
+public class UserStory_12 extends LoginToTryCrm {
 
     @Test
     public void As_a_user_I_should_be_able_to_send_aVerify_users_search() throws InterruptedException {
