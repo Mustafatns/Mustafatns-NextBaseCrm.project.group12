@@ -1,6 +1,7 @@
 package com.Group12.tests.Muhammad.UserStory_7;
 
 import com.Group12.TestBase.LoginToTryCrm;
+import com.Group12.utility.BrowserUtils;
 import com.Group12.utility.Driver;
 import com.google.common.base.Verify;
 import org.openqa.selenium.By;
@@ -27,17 +28,17 @@ public class TestCase_G12_129 extends LoginToTryCrm {
         //2. Verify users can follow posts.
         WebElement followPosts = Driver.getDriver().findElement(By.className("feed-inform-follow"));
         followPosts.click();
-        Thread.sleep(2000);
+        BrowserUtils.sleep(2);
 
         //3. Verify users can see how many people viewed a post.
         WebElement viewPost = Driver.getDriver().findElement(By.className("feed-content-view-cnt-wrap"));
         viewPost.click();
-        Thread.sleep(2000);
+        BrowserUtils.sleep(2);
 
         //4. Verify users can save a post as favorite.
         WebElement saveToFavorite = Driver.getDriver().findElement(By.className("feed-post-important-switch"));
         saveToFavorite.click();
-        Thread.sleep(2000);
+        BrowserUtils.sleep(2);
 
         //5. Verify users can send or cancel a comment to any post.
         //verify cancel comment
@@ -45,14 +46,31 @@ public class TestCase_G12_129 extends LoginToTryCrm {
         commentOnPost.click();
         WebElement cancelButton = Driver.getDriver().findElement(By.xpath("//button[@class='ui-btn ui-btn-sm ui-btn-link']"));
         cancelButton.click();
+        BrowserUtils.sleep(2);
 
         //verify SendComment
-        WebElement commentPost = Driver.getDriver().findElement(By.className("feed-com-add"));
+        WebElement commentPost = Driver.getDriver().findElement(By.xpath("//a[@class='feed-com-add-link']"));
         commentPost.click();
+        BrowserUtils.sleep(2);
+
+
+        Driver.getDriver().switchTo().frame(Driver.getDriver().findElement(By.className("bx-editor-iframe")));
+        WebElement sendMessage = Driver.getDriver().findElement(By.xpath("//body"));
+        sendMessage.click();
+        sendMessage.sendKeys("Good Morning");
+        BrowserUtils.sleep(2);
+        Driver.getDriver().switchTo().defaultContent();
+
         WebElement SendButton = Driver.getDriver().findElement(By.xpath("//button[@class='ui-btn ui-btn-sm ui-btn-primary']"));
         SendButton.click();
+        BrowserUtils.sleep(2);
 
-        Driver.closeDriver();
+
+       // WebElement sendButton = Driver.getDriver().findElement(By.xpath("//button[@id='lhe_button_submit_blogCommentFormJn3F']"));
+       // sendButton.click();
+        //BrowserUtils.sleep(2);
+
+      Driver.closeDriver();
 
     }
 
