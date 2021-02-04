@@ -1,6 +1,7 @@
 package com.Group12.tests.Angelina;
 
 import com.Group12.TestBase.LoginToTryCrm;
+import com.Group12.utility.BrowserUtils;
 import com.Group12.utility.Driver;
 import com.Group12.utility.WebDriverFactory;
 import org.openqa.selenium.By;
@@ -25,17 +26,37 @@ public class userStory2 extends LoginToTryCrm {
 
             WebElement frame=Driver.getDriver().findElement(By.xpath("//iframe[@class='bx-editor-iframe']"));
             Driver.getDriver().switchTo().frame(frame);
-            Driver.getDriver().findElement(By.xpath("/html/body")).sendKeys("HI");
+            Driver.getDriver().findElement(By.xpath("/html/body")).sendKeys("Group 12!!!");
             Driver.getDriver().switchTo().parentFrame();
-
+            BrowserUtils.sleep(3);
 
              //click button send
             WebElement button = Driver.getDriver().findElement(By.id("blog-submit-button-save"));
             button.click();
-             Thread.sleep(2000);
+            BrowserUtils.sleep(3);
 
         }
 
+        @Test // #2 Test case = Verify users can cancel message.
+    public void user_can_cancel_message () throws InterruptedException {
+            // find a button message
+            WebElement message = Driver.getDriver().findElement(By.id("feed-add-post-form-tab-message"));
+            message.click();
+
+            // use Iframe to put inside the massage box some text
+            WebElement frame=Driver.getDriver().findElement(By.xpath("//iframe[@class='bx-editor-iframe']"));
+            Driver.getDriver().switchTo().frame(frame);
+            Driver.getDriver().findElement(By.xpath("/html/body")).sendKeys("Group 12!!!Batch21!!");
+            Driver.getDriver().switchTo().parentFrame();
+            BrowserUtils.sleep(3);
+
+            // verify user can cancel the message
+            WebElement cancel = Driver.getDriver().findElement(By.id("blog-submit-button-cancel"));
+            cancel.click();
+            BrowserUtils.sleep(3);
+
+
+        }
 
 
 
