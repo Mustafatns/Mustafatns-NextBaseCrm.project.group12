@@ -9,11 +9,9 @@ import org.testng.annotations.Test;
 
 public class TestCase_G12_130 extends LoginToTryCrm {
 
-
     @Test
     public void verify_user_can_cancel_poll() throws InterruptedException {
 
-        //
         //button Click to Poll
         WebElement pollButton = Driver.getDriver().findElement(By.xpath("//span[@id='feed-add-post-form-tab-vote']"));
         pollButton.click();
@@ -55,24 +53,14 @@ public class TestCase_G12_130 extends LoginToTryCrm {
 
         //adding another question1
         WebElement questionBox1 = Driver.getDriver().findElement(By.xpath("(//input[@placeholder='Question '])[2]"));
-        //questionBox1.click();
         questionBox1.sendKeys("What is today?");
         BrowserUtils.sleep(2);
 
-
+        //Cancel Poll Button
         WebElement cancelPoll = Driver.getDriver().findElement(By.xpath("//button[@id='blog-submit-button-cancel']"));
         cancelPoll.click();
         BrowserUtils.sleep(3);
 
-
-
-
-
-
-
     }
-
-
-
 
 }

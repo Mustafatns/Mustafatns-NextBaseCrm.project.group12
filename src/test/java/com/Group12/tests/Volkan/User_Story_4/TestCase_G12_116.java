@@ -7,8 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import java.awt.*;
-
 public class TestCase_G12_116 extends LoginToTryCrm {
 
 
@@ -54,23 +52,6 @@ public class TestCase_G12_116 extends LoginToTryCrm {
         sendButton.click();
         BrowserUtils.sleep(2);
 
-        ////a[@class='vote-new-question-link addq']
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
 
 }

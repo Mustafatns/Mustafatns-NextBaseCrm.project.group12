@@ -46,7 +46,6 @@ public class TestCase_G12_125 extends LoginToTryCrm {
         sendButton.click();
         BrowserUtils.sleep(3);
 
-
     }
 
 }
