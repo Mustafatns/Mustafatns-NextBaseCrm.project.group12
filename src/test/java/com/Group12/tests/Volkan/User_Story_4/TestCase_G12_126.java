@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 
 public class TestCase_G12_126 extends LoginToTryCrm {
 
-
     @Test
     public void verify_Users_can_add_questions() throws InterruptedException {
 
@@ -64,13 +63,6 @@ public class TestCase_G12_126 extends LoginToTryCrm {
         sendButton.click();
         BrowserUtils.sleep(4);
 
-
-
-
-
-
     }
-
-
 
 }
