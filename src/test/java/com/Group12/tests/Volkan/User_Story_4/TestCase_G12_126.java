@@ -53,7 +53,6 @@ public class TestCase_G12_126 extends LoginToTryCrm {
 
         //adding another question1
         WebElement questionBox1 = Driver.getDriver().findElement(By.xpath("(//input[@placeholder='Question '])[2]"));
-        //questionBox1.click();
         questionBox1.sendKeys("What is today?");
         BrowserUtils.sleep(2);
 
